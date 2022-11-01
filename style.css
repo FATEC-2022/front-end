@@ -98,9 +98,13 @@ button {
     background-color: deepskyblue;
 }
 
+.title-results {
+    color: #F1F1F1;
+}
+
 .input-alex {
     max-width: 100%;
-    min-width: 300px;
+    min-width: 330px;
     width: auto;
     height: 15px;
     margin: 15px;
@@ -120,7 +124,7 @@ button {
 
 .input-user {
     max-width: 100%;
-    min-width: 300px;
+    min-width: 330px;
     width: auto;
     height: 15px;
     margin: 15px;
