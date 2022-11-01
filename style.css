@@ -67,28 +67,27 @@ button {
     cursor: pointer;
 }
 
-.social-icons{
+.social-icons {
     padding: 0;
     list-style: none;
-    display: flex;
 }
 
-.social-icons li{
+.social-icons li {
     margin: 0 20px;
 }
 
 .social-icons li a {
+    border: 3px solid deepskyblue;
     width: 50px;
     height: 50px;
     display: grid;
     place-items: center;
     text-decoration: none;
+    color: white;
     border-radius: 50%;
     border-right: none;
     border-top: none;
     transition: 0.3s ease;
-    color: white;
-    border: 3px solid deepskyblue;
 }
 
 .social-icons li a:hover {
@@ -100,7 +99,9 @@ button {
 }
 
 .input-alex {
-    width: 300px;
+    max-width: 100%;
+    min-width: 300px;
+    width: auto;
     height: 15px;
     margin: 15px;
     padding: 10px;
@@ -113,8 +114,14 @@ button {
     color: #F1F1F1;
 }
 
+.input-alex i {
+    color: #F1F1F1;
+}
+
 .input-user {
-    width: 300px;
+    max-width: 100%;
+    min-width: 300px;
+    width: auto;
     height: 15px;
     margin: 15px;
     padding: 10px;
@@ -124,5 +131,9 @@ button {
 }
 
 .input-user span {
+    color: #F1F1F1;
+}
+
+.input-user i {
     color: #F1F1F1;
 }
