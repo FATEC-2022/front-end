@@ -11,11 +11,7 @@ function start() {
     // DEFINING THE SPEECH RECOGNITION PROPERTIES
     recognition.interimResults = false;
     recognition.lang = "pt-BR";
-<<<<<<< HEAD
-    recognition.continuous = true;
-=======
     recognition.continuous = false;
->>>>>>> b7e0cad (UP)
 
     // STARTING THE SPEECH RECOGNITION
     recognition.start();
@@ -35,50 +31,12 @@ function start() {
                 .toLowerCase();
             output.innerHTML = command;
 
-<<<<<<< HEAD
-            // CREATING JSON FILE WITH THE RECOGNITION RESULT
-            var data = {
-                "command": command
-            };
-            var json = JSON.stringify(data);
-            var fs = require('fs');
-            fs.writeFile('command.json', json, 'utf8', callback);
-
-            // DEFINING THE CALLBACK FUNCTION
-
-
-
-=======
->>>>>>> b7e0cad (UP)
             // ON SPEECH RECOGNITION END
             recognition.onend = function() {
                 assistent.innerHTML = "Não estou mais te ouvindo...";
                 console.log("Não estou mais te ouvindo...");
             }
 
-<<<<<<< HEAD
-            // recognition.onresult = (event) => {
-            //     const results = event.results;
-            //     const transcript = results[results.length - 1][0].transcript;
-            //     output.textContent = transcript;
-            //     if (results[results.length - 1].isFinal) {
-            //         var audio = document.createElement('audio');
-            //         if (transcript === 'Alex' || transcript === 'alex') {
-            //             assistent.textContent = 'Diga doutor, diga!';
-            //             audio.src = "./audio/diga.ogg";
-            //             audio.play();
-
-            //             if (transcript.includes('Bom dia') || transcript.includes('bom dia')) {
-            //                 assistent.textContent = 'Bom dia doutor!';
-            //                 audio.src = "./audio/bom dia.ogg";
-            //                 audio.play();
-            //             }
-            //         } else {
-            //             console.log("Não entendi");
-            //         }
-            //     }
-            // };
-=======
             var audio = document.createElement('audio');
             var commandName = []
 
@@ -105,7 +63,6 @@ function start() {
             } else if (commandName === "alex" && command.includes("dólar")) {
                 
             }
->>>>>>> b7e0cad (UP)
         }
     }
 }
