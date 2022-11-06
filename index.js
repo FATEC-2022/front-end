@@ -11,7 +11,11 @@ function start() {
     // DEFINING THE SPEECH RECOGNITION PROPERTIES
     recognition.interimResults = false;
     recognition.lang = "pt-BR";
+<<<<<<< HEAD
     recognition.continuous = true;
+=======
+    recognition.continuous = false;
+>>>>>>> b7e0cad (UP)
 
     // STARTING THE SPEECH RECOGNITION
     recognition.start();
@@ -31,6 +35,7 @@ function start() {
                 .toLowerCase();
             output.innerHTML = command;
 
+<<<<<<< HEAD
             // CREATING JSON FILE WITH THE RECOGNITION RESULT
             var data = {
                 "command": command
@@ -43,12 +48,15 @@ function start() {
 
 
 
+=======
+>>>>>>> b7e0cad (UP)
             // ON SPEECH RECOGNITION END
             recognition.onend = function() {
                 assistent.innerHTML = "Não estou mais te ouvindo...";
                 console.log("Não estou mais te ouvindo...");
             }
 
+<<<<<<< HEAD
             // recognition.onresult = (event) => {
             //     const results = event.results;
             //     const transcript = results[results.length - 1][0].transcript;
@@ -70,6 +78,34 @@ function start() {
             //         }
             //     }
             // };
+=======
+            var audio = document.createElement('audio');
+            var commandName = []
+
+            // GETTING THE COMMAND NAME
+
+            for (var i = 0; i < 4; i++) {
+                commandName.push(command[i]);
+            }
+
+            commandName = commandName.join("");
+            command = command.replace(commandName, "");
+            if (commandName === "alex" && command === "") {
+                audio.src = "audio/diga.ogg";
+                audio.play();
+            } else if (commandName === "alex" && command.includes("horas")) {
+                audio.src = "audio/horas.ogg";
+                audio.play();
+            } else if (commandName === "alex" && command.includes("dia")) {
+                audio.src = "audio/bom dia.ogg";
+                audio.play();
+            } else if (commandName === "alex" && command.includes("tarde")) {
+                audio.src = "audio/boa tarde.ogg";
+                audio.play();
+            } else if (commandName === "alex" && command.includes("dólar")) {
+                
+            }
+>>>>>>> b7e0cad (UP)
         }
     }
 }
