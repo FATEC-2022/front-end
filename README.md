@@ -30,7 +30,6 @@ Everytime that you want to use Alex, you must click on the button and say the co
 ## How to install Alex? 🤔
 
 You don't need to install Alex 😁, because Alex is a web application that runs in our server 🖥️.
-You just need to access the link: https://96e5-179-96-148-53.sa.ngrok.io/#
 
 ## How Alex works?
 
