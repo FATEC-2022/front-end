@@ -56,11 +56,13 @@ recognition.onstart = function() {
 
         for (let i = 0; i < "alex".length; i++) {
             callAssistent.push(result[i]);
+            console.log(callAssistent);
         }
 
         // STRING TRATAMENT
         callAssistent = callAssistent.join("");
         result = result.replace(callAssistent, "");
+        
 
         // COMMANDS LIST
         if (callAssistent === "alex" && result === "") {
